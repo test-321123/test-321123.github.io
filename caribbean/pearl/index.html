@@ -4,16 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Black Pearl</title>
-    <style>
-        body.light-mode {
-            background-color: white;
-            color: black;
+    <script>
+        // Function to set light/dark mode based on user preference
+        function setModePreference() {
+            const modePreference = localStorage.getItem('modePreference');
+            if (modePreference === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            } else {
+                document.documentElement.removeAttribute('data-theme');
+            }
         }
-        body.dark-mode {
-            background-color: black;
-            color: white;
+
+        // Function to toggle light/dark mode and save preference
+        function toggleMode() {
+            const currentMode = localStorage.getItem('modePreference');
+            const newMode = currentMode === 'dark' ? 'light' : 'dark';
+            localStorage.setItem('modePreference', newMode);
+            setModePreference();
         }
-    </style>
+
+        // Apply mode preference when the page loads
+        window.onload = setModePreference;
+    </script>
 </head>
 <body class="light-mode">
     <img src="/caribbean/chartman.gif" style="width: 100%; height: 75%;">
