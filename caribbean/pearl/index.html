@@ -31,12 +31,28 @@
                 body.classList.remove('light-mode');
                 body.classList.add('dark-mode');
                 toggleButton.textContent = 'Switch to Light Mode';
+                // Save mode preference to local storage
+                localStorage.setItem('mode', 'dark');
             } else {
                 body.classList.remove('dark-mode');
                 body.classList.add('light-mode');
                 toggleButton.textContent = 'Switch to Dark Mode';
+                // Save mode preference to local storage
+                localStorage.setItem('mode', 'light');
             }
         }
+
+        // Check for previously selected mode on page load
+        window.onload = function () {
+            var mode = localStorage.getItem('mode');
+            if (mode === 'dark') {
+                document.body.classList.add('dark-mode');
+                document.getElementById('mode-toggle').textContent = 'Switch to Light Mode';
+            } else {
+                document.body.classList.add('light-mode');
+                document.getElementById('mode-toggle').textContent = 'Switch to Dark Mode';
+            }
+        };
     </script>
 </body>
 </html>
