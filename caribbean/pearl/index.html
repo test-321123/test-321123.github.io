@@ -4,16 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Black Pearl</title>
-    <style>
-        body.light-mode {
-            background-color: white;
-            color: black;
-        }
-        body.dark-mode {
-            background-color: black;
-            color: white;
-        }
-    </style>
 </head>
 <body class="light-mode">
     <img src="/caribbean/chartman.gif" style="width: 100%; height: 75%;">
@@ -21,38 +11,5 @@
     <button onclick="window.location.href='/caribbean'">home</button>
     <button onclick="window.location.href='/caribbean/pearl/cc.html'">Watch</button>
     <button onclick="window.location.href='https://uloz.to/fm/detail/B1gLMblCA661/21uZvCUqjrYC'">Download</button>
-    <button id="mode-toggle" onclick="toggleMode()">Switch to Dark Mode</button>
-
-    <script>
-        function toggleMode() {
-            var body = document.body;
-            var toggleButton = document.getElementById('mode-toggle');
-            if (body.classList.contains('light-mode')) {
-                body.classList.remove('light-mode');
-                body.classList.add('dark-mode');
-                toggleButton.textContent = 'Switch to Light Mode';
-                // Save mode preference to local storage
-                localStorage.setItem('mode', 'dark');
-            } else {
-                body.classList.remove('dark-mode');
-                body.classList.add('light-mode');
-                toggleButton.textContent = 'Switch to Dark Mode';
-                // Save mode preference to local storage
-                localStorage.setItem('mode', 'light');
-            }
-        }
-
-        // Check for previously selected mode on page load
-        window.onload = function () {
-            var mode = localStorage.getItem('mode');
-            if (mode === 'dark') {
-                document.body.classList.add('dark-mode');
-                document.getElementById('mode-toggle').textContent = 'Switch to Light Mode';
-            } else {
-                document.body.classList.add('light-mode');
-                document.getElementById('mode-toggle').textContent = 'Switch to Dark Mode';
-            }
-        };
-    </script>
 </body>
 </html>
