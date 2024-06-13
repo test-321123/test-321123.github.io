@@ -11,45 +11,47 @@
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f5f5f5;
-            color: #333;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: white;
             display: flex;
+            justify-content: center;
+            align-items: center;
             flex-direction: column;
-            justify-content: space-between;
             min-height: 100vh;
-            padding-bottom: 50px; /* Ensure space for footer elements */
         }
 
         h4 {
-            margin-top: 20px;
-            font-size: 20px;
+            font-size: 24px;
             font-weight: bold;
-            text-align: center;
+            margin: 20px 0;
         }
 
         p {
-            font-size: 16px;
+            font-size: 18px;
+            max-width: 600px;
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
 
         hr.solid {
             border: none;
             border-top: 2px solid #ccc;
+            width: 100%;
             margin: 40px 0;
         }
 
         button {
             height: 50px;
+            width: 200px;
+            margin: 10px;
             padding: 10px 20px;
-            font-size: 16px;
+            font-size: 18px;
             cursor: pointer;
             border: none;
             border-radius: 5px;
             background-color: #2575fc;
             color: white;
             transition: background-color 0.3s, transform 0.3s;
-            margin: 10px;
         }
 
         button:hover {
@@ -59,20 +61,18 @@
 
         .archive-button {
             position: absolute;
-            bottom: 10px;
-            right: 10px;
+            bottom: 20px;
+            right: 20px;
         }
     </style>
 </head>
 <body>
-    <div>
-        <h4>These are some movies 9090 that you can watch for free!</h4>
-        <h4>I recommend you use an ad-blocker for some of these</h4>
-        <p>In these videos you're going to have to scroll down to find the controls, and to find the buttons underneath the video</p>
-        <hr class="solid">
-        <button onclick="window.location.href='/caribbean'">Pirates of the Caribbean</button>
-        <button onclick="window.location.href='request-a-movie.html'">Request a movie!</button>
-    </div>
+    <h4>These are some movies 9090 that you can watch for free!</h4>
+    <h4>I recommend you use an ad-blocker for some of these</h4>
+    <p>In these videos you're going to have to scroll down to find the controls, and to find the buttons underneath the video</p>
+    <hr class="solid">
+    <button onclick="window.location.href='/caribbean'">Pirates of the Caribbean</button>
+    <button onclick="window.location.href='request-a-movie.html'">Request a movie!</button>
     <button class="archive-button" onclick="window.location.href='/archive.html'">Archive</button>
 </body>
 </html>
