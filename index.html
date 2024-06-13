@@ -53,6 +53,7 @@
             background-color: #2575fc;
             color: white;
             transition: background-color 0.3s, transform 0.3s;
+            display: block;
         }
 
         button:hover {
@@ -78,6 +79,7 @@
             border-radius: 5px 0 0 5px;
             border: none;
             font-size: 16px;
+            width: 200px;
         }
 
         .search-container button {
@@ -89,26 +91,69 @@
             cursor: pointer;
             font-size: 16px;
         }
+
+        .movie-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .movie-item {
+            margin: 10px;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            text-align: center;
+            max-width: 200px;
+            transition: transform 0.3s;
+        }
+
+        .movie-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .hidden {
+            display: none;
+        }
     </style>
 </head>
 <body>
     <div class="search-container">
-        <input type="text" id="searchInput" placeholder="Search...">
+        <input type="text" id="searchInput" oninput="filterMovies()" placeholder="Search...">
         <button onclick="searchMovies()">Search</button>
     </div>
     <h4>These are some movies 9090 that you can watch for free!</h4>
     <h4>I recommend you use an ad-blocker for some of these</h4>
     <p>In these videos you're going to have to scroll down to find the controls, and to find the buttons underneath the video</p>
     <hr class="solid">
-    <button onclick="window.location.href='/caribbean'">Pirates of the Caribbean</button>
-    <button onclick="window.location.href='request-a-movie.html'">Request a movie!</button>
+    <div class="movie-list" id="movieList">
+        <div class="movie-item" data-title="Pirates of the Caribbean">Pirates of the Caribbean</div>
+        <div class="movie-item" data-title="Spider-Man">Spider-Man</div>
+        <div class="movie-item" data-title="Avengers">Avengers</div>
+        <div class="movie-item" data-title="Inception">Inception</div>
+        <div class="movie-item" data-title="Interstellar">Interstellar</div>
+        <div class="movie-item" data-title="The Dark Knight">The Dark Knight</div>
+    </div>
     <button class="archive-button" onclick="window.location.href='/archive.html'">Archive</button>
 
     <script>
-        function searchMovies() {
-            var searchTerm = document.getElementById('searchInput').value;
-            // Perform search functionality here (e.g., redirect to search results page)
-            alert('Search function placeholder: Searching for ' + searchTerm);
+        function filterMovies() {
+            var input, filter, movieList, movies, movie, i, txtValue;
+            input = document.getElementById("searchInput");
+            filter = input.value.toUpperCase();
+            movieList = document.getElementById("movieList");
+            movies = movieList.getElementsByClassName("movie-item");
+
+            for (i = 0; i < movies.length; i++) {
+                movie = movies[i];
+                txtValue = movie.getAttribute("data-title");
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    movie.classList.remove("hidden");
+                } else {
+                    movie.classList.add("hidden");
+                }
+            }
         }
     </script>
 </body>
