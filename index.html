@@ -107,6 +107,7 @@
             text-align: center;
             max-width: 200px;
             transition: transform 0.3s;
+            cursor: pointer;
         }
 
         .movie-item:hover {
@@ -128,12 +129,12 @@
     <p>In these videos you're going to have to scroll down to find the controls, and to find the buttons underneath the video</p>
     <hr class="solid">
     <div class="movie-list" id="movieList">
-        <div class="movie-item" data-title="Pirates of the Caribbean">Pirates of the Caribbean</div>
-        <div class="movie-item" data-title="Spider-Man">Spider-Man</div>
-        <div class="movie-item" data-title="Avengers">Avengers</div>
-        <div class="movie-item" data-title="Inception">Inception</div>
-        <div class="movie-item" data-title="Interstellar">Interstellar</div>
-        <div class="movie-item" data-title="The Dark Knight">The Dark Knight</div>
+        <button class="movie-item" data-title="Pirates of the Caribbean" onclick="window.location.href='/caribbean'">Pirates of the Caribbean</button>
+        <button class="movie-item" data-title="Spider-Man" onclick="window.location.href='/spiderman'">Spider-Man</button>
+        <button class="movie-item" data-title="Avengers" onclick="window.location.href='/avengers'">Avengers</button>
+        <button class="movie-item" data-title="Inception" onclick="window.location.href='/inception'">Inception</button>
+        <button class="movie-item" data-title="Interstellar" onclick="window.location.href='/interstellar'">Interstellar</button>
+        <button class="movie-item" data-title="The Dark Knight" onclick="window.location.href='/darkknight'">The Dark Knight</button>
     </div>
     <button class="archive-button" onclick="window.location.href='/archive.html'">Archive</button>
 
@@ -147,13 +148,19 @@
 
             for (i = 0; i < movies.length; i++) {
                 movie = movies[i];
-                txtValue = movie.getAttribute("data-title");
-                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                    movie.classList.remove("hidden");
+                txtValue = movie.getAttribute("data-title").toUpperCase();
+                if (txtValue.indexOf(filter) > -1) {
+                    movie.style.display = "block";
                 } else {
-                    movie.classList.add("hidden");
+                    movie.style.display = "none";
                 }
             }
+        }
+
+        function searchMovies() {
+            var searchTerm = document.getElementById('searchInput').value;
+            // Implement your search functionality here
+            alert('Search function placeholder: Searching for ' + searchTerm);
         }
     </script>
 </body>
