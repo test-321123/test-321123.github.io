@@ -1,13 +1,62 @@
-<html>
-  <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solo Leveling</title>
-  </head>
-  <body>
-
-    <img src="/caribbean/chartman.gif" style="width: 100%; height: 75%;">
-    <button onclick="window.location.href='/index.html'" style="height: 75px; width: 75px;">back</button>
-    <hr class="solid">
-    <button onclick="window.location.href='/caribbean/pearl'">Black Pearl</button>
-    
-  </body>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            max-height: 75vh;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            height: 75px;
+            width: 75px;
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        hr.solid {
+            border: none;
+            border-top: 2px solid #ccc;
+            margin: 40px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="/caribbean/chartman.gif" alt="Chartman">
+        <div class="buttons">
+            <button onclick="window.location.href='/index.html'">Back</button>
+        </div>
+        <hr class="solid">
+        <div class="buttons">
+            <button onclick="window.location.href='/caribbean/pearl'">Black Pearl</button>
+        </div>
+    </div>
+</body>
 </html>
