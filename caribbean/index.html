@@ -73,17 +73,52 @@
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
         }
 
-        hr.solid {
-            border: none;
-            border-top: 2px solid #ccc;
-            margin: 40px 0;
+        .movie-section {
+            margin-top: 50px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .movie-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .movie {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .movie a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .movie img {
+            max-width: 200px; /* Adjust image size as needed */
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .movie img:hover {
+            transform: scale(1.05);
+        }
+
+        .movie p {
+            margin: 10px 0;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="hero">
-            <h1>Pirates...</h1>
+            <h1>Pirates of the Caribbean</h1>
         </div>
         <div class="buttons">
             <button onclick="window.location.href='/index.html'">Back</button>
@@ -92,6 +127,39 @@
             <button onclick="window.location.href='/caribbean/worlds-end'">At World's End</button>
             <button onclick="window.location.href='/caribbean/stranger-tides'">On Stranger Tides</button>
             <button onclick="window.location.href='/caribbean/tell-no-tales'">Dead Man Tell No Tales</button>
+        </div>
+    </div>
+
+    <div class="movie-section">
+        <div class="container">
+            <h2>More Movies</h2>
+            <div class="movie-list">
+                <div class="movie">
+                    <a href="/movie1.html">
+                        <img src="/images/movie1.jpg" alt="Movie 1">
+                        <p>Movie Title 1</p>
+                    </a>
+                </div>
+                <div class="movie">
+                    <a href="/movie2.html">
+                        <img src="/images/movie2.jpg" alt="Movie 2">
+                        <p>Movie Title 2</p>
+                    </a>
+                </div>
+                <div class="movie">
+                    <a href="/movie3.html">
+                        <img src="/images/movie3.jpg" alt="Movie 3">
+                        <p>Movie Title 3</p>
+                    </a>
+                </div>
+                <div class="movie">
+                    <a href="/movie4.html">
+                        <img src="/images/movie4.jpg" alt="Movie 4">
+                        <p>Movie Title 4</p>
+                    </a>
+                </div>
+                <!-- Add more movie divs as needed -->
+            </div>
         </div>
     </div>
 </body>
