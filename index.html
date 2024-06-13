@@ -18,6 +18,7 @@
             align-items: center;
             flex-direction: column;
             min-height: 100vh;
+            position: relative;
         }
 
         h4 {
@@ -64,14 +65,51 @@
             bottom: 20px;
             right: 20px;
         }
+
+        .search-container {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+        }
+
+        .search-container input[type=text] {
+            padding: 10px;
+            border-radius: 5px 0 0 5px;
+            border: none;
+            font-size: 16px;
+        }
+
+        .search-container button {
+            padding: 10px 20px;
+            border-radius: 0 5px 5px 0;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+        }
     </style>
 </head>
 <body>
-    <h4>These are some movies that you can watch for free!</h4>
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search...">
+        <button onclick="searchMovies()">Search</button>
+    </div>
+    <h4>These are some movies 9090 that you can watch for free!</h4>
     <h4>I recommend you use an ad-blocker for some of these</h4>
+    <p>In these videos you're going to have to scroll down to find the controls, and to find the buttons underneath the video</p>
     <hr class="solid">
     <button onclick="window.location.href='/caribbean'">Pirates of the Caribbean</button>
     <button onclick="window.location.href='request-a-movie.html'">Request a movie!</button>
     <button class="archive-button" onclick="window.location.href='/archive.html'">Archive</button>
+
+    <script>
+        function searchMovies() {
+            var searchTerm = document.getElementById('searchInput').value;
+            // Perform search functionality here (e.g., redirect to search results page)
+            alert('Search function placeholder: Searching for ' + searchTerm);
+        }
+    </script>
 </body>
 </html>
