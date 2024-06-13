@@ -4,14 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Black Pearl</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        img {
+            width: 100%;
+            height: 50vh; /* Adjusted height for better proportion */
+            object-fit: cover; /* Ensures the image covers the entire area */
+        }
+
+        button {
+            height: 50px;
+            width: 120px;
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+
+        h4 {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: normal;
+        }
+
+        hr.solid {
+            border: none;
+            border-top: 2px solid #ccc;
+            margin: 40px 0;
+        }
+    </style>
 </head>
 <body>
-    <img src="/caribbean/chartman.gif" style="width: 100%; height: 75%;">
-    <button onclick="window.location.href='/caribbean.html'" style="height: 75px; width: 75px;">back</button>
-    <h4>I <b>HIGHLY</b> recommend you use an adblocker if you want to watch your movie here.</h4>
-    <button onclick="window.location.href='/index.html'" style="height: 75px; width: 75px;">home</button>
+    <img src="/caribbean/chartman.gif" alt="Chartman">
+    <button onclick="window.location.href='/caribbean.html'">Back</button>
+    <h4><b>I HIGHLY recommend you use an adblocker if you want to watch your movie here.</b></h4>
+    <button onclick="window.location.href='/index.html'">Home</button>
     <hr class="solid">
-    <button onclick="window.location.href='/caribbean/pearl/cc.html'">Watch</button>
+    <button onclick="window.location.href='/caribbean/pearl/cc.html'">Watch Now</button>
     <button onclick="window.location.href='https://uloz.to/fm/detail/B1gLMblCA661/21uZvCUqjrYC'">Download</button>
 </body>
 </html>
