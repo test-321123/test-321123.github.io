@@ -67,6 +67,24 @@
             right: 20px;
         }
 
+        .request-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            z-index: 1; /* Ensure it's above other content */
+        }
+
+        .request-button:hover {
+            background-color: #45a049;
+        }
+
         .search-container {
             position: absolute;
             top: 20px;
@@ -126,6 +144,7 @@
     </div>
     <h4>These are some movies 9090 that you can watch for free!</h4>
     <h4>I recommend you use an ad-blocker for some of these</h4>
+    <p>In these videos you're going to have to scroll down to find the controls, and to find the buttons underneath the video</p>
     <hr class="solid">
     <div class="movie-list" id="movieList">
         <button class="movie-item" data-title="Pirates of the Caribbean" onclick="window.location.href='/caribbean'">Pirates of the Caribbean</button>
@@ -136,6 +155,7 @@
         <button class="movie-item" data-title="The Dark Knight" onclick="window.location.href='/darkknight'">The Dark Knight</button>
     </div>
     <button class="archive-button" onclick="window.location.href='/archive.html'">Archive</button>
+    <button class="request-button" onclick="window.location.href='request-a-movie.html'">Request a Movie</button>
 
     <script>
         function filterMovies() {
