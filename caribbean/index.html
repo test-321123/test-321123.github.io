@@ -5,41 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solo Leveling</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
             text-align: center;
+            background: linear-gradient(135deg, #ffcc70, #ff7b00);
+            color: white;
         }
+
         .container {
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
         }
-        img {
-            width: 100%;
-            height: auto;
-            max-height: 75vh;
+
+        .hero {
+            padding: 50px 20px;
+            background: url('/caribbean/chartman.gif') no-repeat center center/cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            color: #fff;
         }
+
+        .hero h1 {
+            font-size: 48px;
+            margin: 0;
+        }
+
+        .hero p {
+            font-size: 24px;
+            margin: 10px 0 0;
+        }
+
         .buttons {
             margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
         }
+
         button {
             height: 75px;
-            width: 75px;
+            width: 150px;
             margin: 10px;
             padding: 10px;
-            font-size: 16px;
+            font-size: 18px;
             cursor: pointer;
             border: none;
-            border-radius: 5px;
-            background-color: #4CAF50;
+            border-radius: 10px;
+            background-color: #ff7b00;
             color: white;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
         }
+
         button:hover {
-            background-color: #45a049;
+            background-color: #ff5500;
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
         }
+
         hr.solid {
             border: none;
             border-top: 2px solid #ccc;
@@ -49,12 +80,12 @@
 </head>
 <body>
     <div class="container">
-        <img src="/caribbean/chartman.gif" alt="Chartman">
+        <div class="hero">
+            <h1>Solo Leveling</h1>
+            <p>Join the adventure</p>
+        </div>
         <div class="buttons">
             <button onclick="window.location.href='/index.html'">Back</button>
-        </div>
-        <hr class="solid">
-        <div class="buttons">
             <button onclick="window.location.href='/caribbean/pearl'">Black Pearl</button>
         </div>
     </div>
