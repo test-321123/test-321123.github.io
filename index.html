@@ -61,12 +61,6 @@
             transform: scale(1.05);
         }
 
-        .archive-button {
-            position: absolute;
-            bottom: 20px;
-            right: 20px;
-        }
-
         .request-button {
             position: fixed;
             bottom: 20px; /* Moved down */
@@ -103,31 +97,6 @@
             background-color: #1a5bbf;
         }
 
-        .search-container {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            display: flex;
-        }
-
-        .search-container input[type=text] {
-            padding: 10px;
-            border-radius: 5px 0 0 5px;
-            border: none;
-            font-size: 16px;
-            width: 200px;
-        }
-
-        .search-container button {
-            padding: 10px 20px;
-            border-radius: 0 5px 5px 0;
-            border: none;
-            background-color: #2575fc;
-            color: white;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
         .movie-list {
             display: flex;
             flex-wrap: wrap;
@@ -156,10 +125,6 @@
     </style>
 </head>
 <body>
-    <div class="search-container">
-        <input type="text" id="searchInput" oninput="filterMovies()" placeholder="Search...">
-        <button onclick="searchMovies()">Search</button>
-    </div>
     <h4>These are free, dont expect it to be over 1080p.</h4>
     <h4>I recommend you use an ad-blocker</h4>
     <hr class="solid">
@@ -169,31 +134,5 @@
     </div>
     <button class="contact-button" onclick="window.location.href='/contact.html'">Contact (discord)</button>
     <button class="request-button" onclick="window.location.href='request-a-movie.html'">Request Movie(s)/Show(s)</button>
-
-    <script>
-        function filterMovies() {
-            var input, filter, movieList, movies, movie, i, txtValue;
-            input = document.getElementById("searchInput");
-            filter = input.value.toUpperCase();
-            movieList = document.getElementById("movieList");
-            movies = movieList.getElementsByClassName("movie-item");
-
-            for (i = 0; i < movies.length; i++) {
-                movie = movies[i];
-                txtValue = movie.getAttribute("data-title").toUpperCase();
-                if (txtValue.indexOf(filter) > -1) {
-                    movie.style.display = "block";
-                } else {
-                    movie.style.display = "none";
-                }
-            }
-        }
-
-        function searchMovies() {
-            var searchTerm = document.getElementById('searchInput').value;
-            // Implement your search functionality here
-            alert('Search function placeholder: Searching for ' + searchTerm);
-        }
-    </script>
 </body>
 </html>
